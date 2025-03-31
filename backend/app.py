@@ -11,8 +11,8 @@ from textblob import Word
 # Descargar recursos necesarios de NLTK
 nltk.data.path.append("nltk_data")
 #nltk.download('punkt')
-#nltk.download('stopwords')
-#nltk.download('wordnet')
+nltk.download('stopwords')
+nltk.download('wordnet')
 
 app = Flask(__name__)
 
