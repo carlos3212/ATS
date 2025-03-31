@@ -1,0 +1,102 @@
+/* App.css */
+
+/* Contenedor principal, ahora con una distribución más espaciosa */
+.app-container {
+    display: flex;
+    justify-content: space-around;  /* Distribuye los contenedores por igual en el espacio */
+    flex-wrap: wrap;  /* Permite que se acomoden en varias filas si el espacio es reducido */
+    padding: 20px;
+    background: linear-gradient(135deg, #a7b6f9, #a7c1e3);
+    min-height: 100vh;
+    font-family: 'Poppins', sans-serif; /* Aplica la fuente Poppins a toda la aplicación */
+  }
+  
+  /* Contenedor específico para UploadCV */
+  .upload-cv-container {
+    background-color: white;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    flex: 1 1 100%;  /* Ocupa un 30% del espacio disponible y se ajusta */
+    min-width: 280px; /* Asegura que el contenedor no se haga muy pequeño */
+    text-align: center;
+  }
+  
+  /* Contenedor específico para JobDescription */
+  .job-description-container {
+    background-color: white;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 15px;
+    flex: 1 1 100%;  /* Ocupa un 30% del espacio disponible */
+    min-width: 280px;
+    text-align: center;
+  }
+  
+  /* Contenedor específico para CompareCV */
+  .compare-cv-container {
+    background-color: white;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 15px;
+    flex: 1 1 30%;  /* Ocupa un 30% del espacio disponible */
+    min-width: 280px;
+    text-align: center;
+  }
+  
+  /* Estilo para el título */
+  .title {
+    font-size: 3.5rem; /* Tamaño más grande para darle protagonismo */
+    font-weight: 600; /* Peso semi-negrita para mayor presencia */
+    color: #4a4c78;
+    text-align: center;
+    margin-bottom: 30px;
+    letter-spacing: 1px; /* Añade un toque más moderno */
+    text-transform: capitalize; /* Capitaliza las primeras letras */
+  }
+  
+  /* Estilo de los botones */
+  button {
+    background-color: #4c6ef5;
+    color: white;
+    font-weight: 600;
+    padding: 12px 24px;
+    border-radius: 9999px; /* Bordes redondeados para un estilo más moderno */
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    font-size: 1.1rem; /* Un tamaño de fuente adecuado para los botones */
+    letter-spacing: 1px; /* Da un pequeño espaciado entre las letras para modernizar */
+  }
+  
+  button:hover {
+    background-color: #3b5cdb;
+    transform: translateY(-2px);
+  }
+  
+  button:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(72, 85, 99, 0.3);
+  }
+  
+  /* Estilo para los textos dentro de los contenedores */
+  .upload-cv-container h2, 
+  .job-description-container h2, 
+  .compare-cv-container h2 {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: #4a4c78;
+    margin-bottom: 20px;
+  }
+  
+  .upload-cv-container p,
+  .job-description-container p,
+  .compare-cv-container p {
+    font-size: 1.1rem;
+    color: #666;
+    line-height: 1.6; /* Mejor legibilidad */
+  }
+  
