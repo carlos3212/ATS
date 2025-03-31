@@ -6,3 +6,4 @@ scikit-learn
 gunicorn
 nltk
 textblob
+punkt_tab
