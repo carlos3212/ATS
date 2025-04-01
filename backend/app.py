@@ -9,8 +9,8 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from textblob import Word
 
 # Descargar recursos necesarios de NLTK
-nltk.data.path.append("nltk_data")
-#nltk.download('punkt')
+nltk.download('punkt')
+nltk.download('punkt_tab')
 nltk.download('stopwords')
 nltk.download('wordnet')
 

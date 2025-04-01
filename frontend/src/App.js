@@ -4,6 +4,8 @@ import JobDescription from "./components/JobDescription";
 import CompareCV from "./components/CompareCV";
 import './App.css';
 
+
+
 function App() {
   const [cvKeywords, setCvKeywords] = useState([]);
   const [jobDescription, setJobDescription] = useState("");
