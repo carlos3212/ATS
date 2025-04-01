@@ -15,7 +15,7 @@ const UploadCV = ({ onKeywordsExtracted }) => {
       .split(/\s+/)
       .map((word) => word.toLowerCase())
       .filter((word) => word.length > 3); // Filtrando palabras muy cortas
-    return words.slice(0, 2000); // Limitar a las primeras 10 palabras clave
+    return words.slice(0, 2000); // Limitar a las primeras 2000 palabras clave
   };
 
   const handleUpload = async () => {
@@ -43,13 +43,27 @@ const UploadCV = ({ onKeywordsExtracted }) => {
   };
 
   return (
-    <div className="p-4 max-w-md mx-auto border rounded-lg shadow-md">
-      <h2 className="text-lg font-bold mb-4">Subir CV en PDF</h2>
-      <input type="file" accept="application/pdf" onChange={handleFileChange} />
-      <button onClick={handleUpload} className="bg-indigo-600 text-white font-semibold py-3 px-6 rounded-full shadow-md
-                   hover:bg-indigo-500 hover:shadow-lg transition duration-300">
+    <div className="p-4 sm:p-6 lg:p-8 max-w-md sm:max-w-lg lg:max-w-2xl mx-auto border rounded-lg shadow-md">
+      <h2 className="text-lg sm:text-xl lg:text-2xl font-bold mb-4">Subir CV en PDF</h2>
+      
+      {/* Input para cargar el archivo PDF */}
+      <input 
+        type="file" 
+        accept="application/pdf" 
+        onChange={handleFileChange} 
+        className="w-full p-2 mb-4 border rounded focus:outline-none focus:ring-2 focus:ring-indigo-600"
+      />
+
+      {/* Botón para procesar el archivo */}
+      <button 
+        onClick={handleUpload} 
+        className="bg-indigo-600 text-white font-semibold py-3 px-6 rounded-full shadow-md
+                   hover:bg-indigo-500 hover:shadow-lg transition duration-300 w-full sm:w-auto"
+      >
         Subir y Procesar
       </button>
+
+      {/* Texto extraído */}
       {text && (
         <div className="mt-4 p-2 border rounded bg-gray-100">
           <h3 className="font-bold">Texto extraído:</h3>

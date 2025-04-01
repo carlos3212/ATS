@@ -5,10 +5,64 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Filtro ATS</title>
+    <style>
+      /* Estilos globales */
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Poppins', sans-serif;
+        background-color: #f5f5f5;
+      }
+
+      /* Contenedor principal que incluye el contenido */
+      #root {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+
+      /* Estilo del footer */
+      footer {
+        text-align: center;
+        margin-top: 50px;
+        font-size: 14px;
+        padding: 20px 0;
+        background-color: #4c6ef5;
+        color: white;
+      }
+
+      /* Respuesta de texto en el footer */
+      footer p {
+        margin: 0;
+      }
+
+      /* Media Queries para mejorar la responsividad */
+      @media (max-width: 768px) {
+        footer {
+          font-size: 12px;
+          padding: 15px 0;
+        }
+
+        #root {
+          padding: 15px;
+        }
+      }
+
+      @media (max-width: 480px) {
+        footer {
+          font-size: 10px;
+          padding: 10px 0;
+        }
+
+        #root {
+          padding: 10px;
+        }
+      }
+    </style>
   </head>
   <body>
-    <div id="root"></div>  <!-- React se renderiza aquí -->
-    <footer style="text-align: center; margin-top: 50px; font-size: 14px;">
+    <div id="root"></div> <!-- React se renderiza aquí -->
+    <footer>
       <p>Desarrollado por Carlos Andrade</p>
     </footer>
   </body>
