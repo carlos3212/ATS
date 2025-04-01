@@ -9,7 +9,7 @@ const CompareCV = ({ cvKeywords, jobDescription }) => {
     console.log("jobDescription:", jobDescription);
     if (cvKeywords.length > 0 && jobDescription) {
       axios
-        .post("http://127.0.0.1:5000/compare", { cvKeywords, jobDescription })
+        .post("https://ats-3a5z.onrender.com/compare", { cvKeywords, jobDescription })
         .then((response) => setComparison(response.data))
         .catch((error) => console.error("Error en la comparación:", error));
     }

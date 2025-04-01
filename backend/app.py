@@ -17,7 +17,7 @@ nltk.download('wordnet')
 app = Flask(__name__)
 
 # ✅ Permitir CORS para localhost y 127.0.0.1
-CORS(app, resources={r"/*": {"origins": ["http://localhost:3000", "http://127.0.0.1:3000"]}}, supports_credentials=True)
+CORS(app, resources={r"/*": {"origins": ["https://ats-front.onrender.com"]}}, supports_credentials=True)
 
 UPLOAD_FOLDER = "uploads"
 app.config["UPLOAD_FOLDER"] = UPLOAD_FOLDER
@@ -125,4 +125,4 @@ def compare_cv():
         return jsonify({"error": str(e)}), 500
 
 if __name__ == "__main__":
-    app.run(debug=True, host="localhost", port=5000)
+    app.run(debug=False, host="localhost", port=5000)
